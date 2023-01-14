@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/coreybrandon/haunting/handlers"
+	"github.com/coreybrandon/paranormals/handlers"
 )
 
 func main() {

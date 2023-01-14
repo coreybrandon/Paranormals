@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/coreybrandon/haunting/models"
+	"github.com/coreybrandon/paranormals/models"
 )
 
 var (

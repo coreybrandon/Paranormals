@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/coreybrandon/haunting/models"
+	"github.com/coreybrandon/paranormals/models"
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
