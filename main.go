@@ -2,17 +2,19 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"net/http"
+
+	"github.com/coreybrandon/haunting/handlers"
 )
 
 func main() {
 
-	mux := http.NewServeMux()
-	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe(":8080", mux))
-}
+	http.HandleFunc("/", handlers.Handler)
+	http.HandleFunc("/products", handlers.GetProducts)
+	err := http.ListenAndServe(":8080", nil)
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Test\n")
+	if err != nil {
+		fmt.Println(err)
+
+	}
 }
